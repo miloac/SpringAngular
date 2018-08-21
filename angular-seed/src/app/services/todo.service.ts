@@ -14,6 +14,10 @@ export class TodoService {
   
   list(): Todo[] {
         return this.todos;
-      }      
+      }
+  create(description: string, priority: Number, completed: boolean){
+    this.list().push(new Todo(description, priority, completed));
+  
+  }      
 
 }
